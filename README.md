@@ -1,10 +1,12 @@
-HELLO WORLD
 
-# CLIFreeTimes
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/CLI_FreeTimes`. To experiment with that code, run `bin/console` for an interactive prompt.
+FreeTimes Events!
 
-TODO: Delete this and the text above, and describe your gem
+This gem was written by Mccaryr. 
+
+This Ruby Gem provides a CLI to view the local events in Columbia SC for the week. The user will be able to choose what day and will receive a numbered list of events that they may choose from. The user will then enter the corresponding number to the event and they will receive details on the chosen event!
+
+
 
 ## Installation
 
