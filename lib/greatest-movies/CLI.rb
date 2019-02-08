@@ -23,6 +23,6 @@ class GreatestMovies::CLI
     end 
 
     def goodbye 
-        puts "Have a nice day!"
+        puts "Have a nice day!!!"
     end 
 end 
