@@ -4,4 +4,3 @@ require_relative '../lib/greatest-movies'
 
 GreatestMovies::CLI.new.call
 
-puts "Hello World"
