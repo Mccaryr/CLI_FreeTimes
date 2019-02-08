@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/greatest-movies'
+require "bundler/setup"
+require_relative "../config/environment"
 
 GreatestMovies::CLI.new.call
 
