@@ -13,7 +13,7 @@
       doc = Nokogiri::HTML(open("https://www.imdb.com/list/ls055592025/"))
 
       movie = self.new 
-      movie.ranking = doc.css("lister-item-index unbold text-primary").text
+      movie.ranking = doc.search("h3.lister-item-header")[2].text.strip.gsub(/[\n]/,"") 
       binding.pry 
       # movie.name = doc.search()
     end 
