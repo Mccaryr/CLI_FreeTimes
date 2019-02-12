@@ -8,7 +8,8 @@ class GreatestMovies::CLI
 
     def list_movies 
         puts "Greatest Movies of All Time"
-        @movies = GreatestMovies::Movies.compile 
+        @movies = GreatestMovies::Movies.compile
+        binding.pry
         @movies.each do |movie|
             puts "#{movie.list}"
             # binding.pry 
