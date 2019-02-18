@@ -1,6 +1,11 @@
  class GreatestMovies::Movies
-
-  attr_accessor :list, :info, :cast     
+  @@all = [] 
+  attr_accessor :list, :info 
+  
+   
+    def self.get_info(user_input)
+      @@all[user_input.to_i-1]
+    end 
 
     def self.scrape_imdb 
       doc = Nokogiri::HTML(open("https://www.imdb.com/list/ls055592025/"))
@@ -8,9 +13,8 @@
         movie = self.new
 
         movie.list = m.search("h3").text.gsub("\n", "").strip
-        movie.cast = m.search("p")[2].text 
-        movie.info = m.search("p")[1].text
-        movie
+        @@all << movie.info = m.search("p")[1].text
+        movie  
       end
     end 
 
@@ -18,6 +22,4 @@
       self.scrape_imdb
     end 
 
-   
-    
 end 
