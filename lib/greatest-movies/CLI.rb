@@ -8,10 +8,10 @@ class GreatestMovies::CLI
 
     def list_movies 
         puts "Greatest Movies of All Time"
-        @movies = GreatestMovies::Movies.compile
-        
-        @movies.each do |movie|
-            puts "#{movie.list}"
+        GreatestMovies::Movies.compile
+
+        GreatestMovies::Movies.all.each do |movie|
+            puts "#{movie.title}"
         end 
     end 
 
@@ -30,7 +30,9 @@ class GreatestMovies::CLI
                 list_movies 
             
             else
+               puts
                puts "Invalid response, type number of movie or list or exit."
+               puts
             
             end 
         end
@@ -40,4 +42,4 @@ class GreatestMovies::CLI
     def goodbye 
         puts "Have a nice day!!!!"
     end 
-end 
+end
